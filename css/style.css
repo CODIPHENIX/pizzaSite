@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    --primary: #FF9505;
+    --secondary:#261C15;
+}
+
+body{
+    font-family: inter;
+}
+.dropdown-toggle::after {
+    color: #fff;
+}
+
+
+.custom-btn{
+    color:#fff;
+    border: none;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    padding: 0.3rem 0.8rem;
+    min-width: 1rem;
+
+}
+
+.a-btn{
+    border: 0.2rem solid #fff;
+}
+.a-btn:hover{
+    
+    color:var(--primary);
+    background-color: #fff;
+
+}
+
+.custom-img{
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0 ;
+}
+.custom1-img{
+    width: 100%;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.custom2-img{
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+@media screen and (max-width: 992px){
+    .custom1-img{
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 0.5rem 0.5rem 0 0 ;
+    }
+
+}

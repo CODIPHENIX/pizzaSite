@@ -46,4 +46,5 @@ function getclient(){
     return $result_all_client;
 
 }
+$conn= connectDB("localhost","root","","pizzainnodb");
 ?>

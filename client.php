@@ -33,15 +33,15 @@ include_once("head.php");
     </div>
     </header>
     <!-- end header with nav bar --> 
-    <!-- add pizza section  -->
-    <section class="add-pizza py-2 bg-primary">
+    <!-- add client section  -->
+    <section class="add-client py-2 bg-primary">
         <div class="container">
             <div class="d-flex flex-row-reverse ">          
-            <a href="#" class="custom-btn a-btn">Ajouter</a>    
+            <a href="#" class="custom-btn a-btn" data-bs-toggle="modal" ata-bs-target="add_client_Modal">>Ajouter</a>    
             </div>
         </div>
     </section>
-    <!-- main section to display pizza  -->
+    <!-- main section to display client  -->
     <section class="bg-secondary">
         <div class="container py-4">
            
@@ -84,13 +84,4 @@ include_once("head.php");
 
     </section>
 
-    <footer class="bg-primary py-3 text-white ">
-        
-        <div class="container justify-content-center">
-            <p class="text-center mb-0"><strong>Copyright&copy;</strong> Project Pizza 2024 by <strong>Bwango Astrid</strong></p>
-        </div>
-    </footer>
-
-
-</body>
-</html>
+    <?php include_once("footer.php");?>

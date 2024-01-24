@@ -80,13 +80,4 @@ include_once("head.php");
 
     </section>
 
-    <footer class="bg-primary py-3 text-white ">
-        
-        <div class="container justify-content-center">
-            <p class="text-center mb-0"><strong>Copyright&copy;</strong> Project Pizza 2024 by <strong>Bwango Astrid</strong></p>
-        </div>
-    </footer>
-
-
-</body>
-</html>
+    <?php include_once("footer.php");?>

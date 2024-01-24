@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,10 +8,7 @@
     <link rel="stylesheet" href="css/custom.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- end css -->
-    <!-- Include Popper.js -->
-   <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-   <!-- Include Bootstrap 5 JS -->
-   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   
    
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">

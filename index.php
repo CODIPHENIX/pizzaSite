@@ -17,7 +17,7 @@ include_once("head.php");
         </form>
 
         <ul class="nav col-12 col-lg-auto ms-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="index.php" class="nav-link px-3 link-active">pizza</a></li>
+          <li><a href="index.php" class="nav-link px-3 link-active">Pizza</a></li>
           <li><a href="livreur.php" class="nav-link px-3 link-light">Livreur</a></li>
           <li><a href="client.php" class="nav-link px-3 link-light">Client</a></li>
           <li><a href="#" class="nav-link px-3 link-light">Commande</a></li>
@@ -66,7 +66,7 @@ include_once("head.php");
           echo '<h6 class="card-text text-primary">£' . $row['TARIFPIZZ'] . '</h6>';
           echo '<div class="container d-flex justify-content-evenly  g-1">';
           echo '<a href="#" class="custom-btn bg-primary edit_data">Modifier</a> ';
-          echo '<a href="#" class="custom-btn bg-secondary delete_pizza" >Supprimer</a>';
+          echo '<a href="#" class="custom-btn bg-secondary confirm_delete_pizza" >Supprimer</a>';
           echo '</div>';
           echo '</div>';
           echo '</div>';
@@ -112,24 +112,26 @@ include_once("head.php");
     });
     // supprimer pizza 
     $(document).ready(function () {
-      $('.delete_pizza').click(function (e) {
+      $('.confirm_delete_pizza').click(function (e) {
         e.preventDefault();
         var pizza_id = $(this).closest('.pizza').find('.pizza_id').text();
 
-        console.log('pizza_id');
+        console.log(pizza_id);
         $('#delete_pizza_id').val(pizza_id)
         $('#delete_pizza_Modal').modal('show');
-      
+
+
         $.ajax({
           method: "POST",
-          url: "recup_pizza.php",
+          url: "delete_pizza.php",
           data: {
             'click_delete_btn': true,
             'pizza_id': pizza_id,
           },
           success: function (response) {
             console.log(response);
-        // window.location.reload(); 
+        // window.location.reload();
+
           }
         });
 

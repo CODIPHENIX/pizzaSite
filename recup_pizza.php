@@ -94,26 +94,6 @@ if (isset($_POST['update_pizza'])) {
       exit(0);
    }
 }
-// Supprimer les donnée de la pizza
-if (isset($_POST['click_delete_btn'])) {
-   $pizza_id = $_POST['pizza_id'];
 
-   $delete_query = "DELETE fROM pizza WHERE NROPIZZ='$pizza_id'";
-   $delete_query_run = mysqli_query($conn, $delete_query);
-
-   if ($delete_query_run) {
-      $_SESSION['message'] = "la pizza a bien éter supprimer.";
-
-      header("location:index.php");
-      exit(0);
-
-   } 
-   else {
-      $_SESSION['message'] = "la pizza n'a pas pu etre supprimer.";
-      header("location:index.php");
-      exit(0);
-
-   }
-}
 
 ?>
